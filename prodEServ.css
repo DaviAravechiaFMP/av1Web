@@ -56,11 +56,34 @@ nav ul{
 }
 .container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     grid-column: 1/-1;
-    grid-row: 3 ;
+    grid-row: 3  ;
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-rows: repeat(auto, 25vh);
 }
 .container img{
     width: 20vw;
     height: 20vh;
+}
+
+.containerLeft{
+    grid-column: 1 / -2;
+}
+.containerRight{
+    grid-column: 2/-1;
+}
+
+.containerDescription{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+}
+.containerTitle{
+    background-color: #2382f7;
+    height: 6vh;
+}
+.containerTitle h1{
+    margin: 0px;
 }
