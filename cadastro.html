@@ -4,18 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro.css">
     <script src="cadastro.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="prodEServ.html">Produtos e serviços</a></li>
+            <li><a>Suporte</a></li>
+            <li><a>Sobre</a></li>
+        </ul>
+    </nav>
     <form class="container" id="containerCadastro">
-        <label for="username">Nome</label>
-        <input type="text" name="username" id="username">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label for="password">Senha</label>
-        <input type="password" name="password" id="pwd">
-        <button type="submit">Cadastrar</button>
+        <div class="containerDados">
+            <div class="containerDadosSpace">
+                <label for="username">Nome</label>
+                <input type="text" name="username" id="username">
+                
+            </div>
+            <div class="containerDadosSpace">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+
+            </div>
+            <div class="containerDadosSpace">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="pwd">
+
+            </div>
+        </div>
+        <div class="containerButton">
+            <button type="submit">Cadastrar</button>
+        </div>
     </form>
 </body>
 </html>
