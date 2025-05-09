@@ -40,10 +40,10 @@ body{
     margin: 0  ;
 }
 nav{
-    margin: 10px 0px;
+    margin: 10px 0px 47px 0px;
     background-color: #ffffff;
-    height: 5%;
-    width: 80%;
+    height: 6.5vh;
+    width: 170vh;
     border: none;
     border-radius: 15px;
 }
