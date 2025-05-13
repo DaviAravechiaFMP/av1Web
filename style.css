@@ -4,9 +4,7 @@ html{
     margin: 0px;
 }
 body{
-    background-image: url(imagem_veterinaria_desenho.png);
-    background-repeat: no-repeat;
-    background-size: 101%;
+    background-color:   #ffffff;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -33,9 +31,9 @@ nav{
 }
 
 header{
-    background-color:#2382f7 ;
+    background-color: #ffffff ;
     width: 102%;
-    color: #ffffff;
+    color: black;
     height: 100px;
     align-content: center;
     justify-items: center;
@@ -50,11 +48,9 @@ header h1{
 }
 nav{
     margin: 10px 0px;
-    background-color: #ffffff;
+    background-color: #2382f7;
     height: 6.5vh;
-    width: 170vh;
-    border: none;
-    border-radius: 15px;
+    width: 100vw;
 
     
 }
@@ -66,11 +62,16 @@ nav ul{
     margin: 0px;
 }
 section{
+
+    width: 40vw;
+    height: 0vh;
+    
+
     /* width: 80vw; */
     /* align-content: center; */
     display: flex;
-    flex-direction: column;
-    align-items: justify;
+    flex-direction: row-reverse;
+    align-items:start;
     font-size: 2.5vh;
     height: 100%;
     width: 100%;
@@ -80,7 +81,10 @@ section p{
 
 }
 .container {
-    background-color: white;
+    background-image: url(imagem_veterinaria_desenho.png);
+    background-size: 35vw;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to left, transparent 15%, black 100%);
     width: 80vw;
     height: 50vh;
     margin: 5vh 0vw 0vh;
@@ -96,11 +100,10 @@ section p{
     width:100%;
     align-items: center;
 }
-.containerImage img{
-    width: 50vh;
-    height: 50vh;
-}
-.containerText{
-    width: 50vw;
-    height: 50vh;
-}
+/* .containerImage{
+    background-image: url(imagem_veterinaria_desenho.png);
+    width: 40vw;
+    height: 0vh;
+    background-size: 50vw;
+    -webkit-mask-image: linear-gradient(to left, transparent 25%, black 100%);
+} */
