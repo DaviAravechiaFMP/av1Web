@@ -4,7 +4,6 @@ html{
     margin: 0px;
 }
 body{
-    background-image: url(imagem_veterinaria_desenho.png);
     background-repeat: no-repeat;
     background-size: 101%;
     align-items: center;
@@ -25,19 +24,21 @@ body{
 body nav{
     justify-content: space-around;
     align-content: center ;
+    z-index: 1;
     margin: 1vh;
 
 }
 
 header{
-    background-color:#2382f7 ;
+    background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
-    color: #ffffff;
+    color: #000;
     height: 100px;
     align-content: center;
     justify-items: center;
     border-radius: 25px;
     margin: 0px;
+    z-index: 1;
 
 }
 
@@ -47,11 +48,9 @@ header h1{
 }
 nav{
     margin: 10px 0px;
-    background-color: #ffffff;
+    background-color: #2382f7;
     height: 6.5vh;
-    width: 170vh;
-    border: none;
-    border-radius: 15px;
+    width: 100vw;
 
     
 }
@@ -71,13 +70,14 @@ section{
     font-size: 2.5vh;
     height: 100%;
     width: 100%;
+
 }
 section p{
     margin: 15px 5px;
 
 }
 .container {
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.8);
     width: 30vw;
     height: 60vh;
     margin: 5vh 0vw 0vh;
@@ -88,10 +88,12 @@ section p{
 
 }
 form{
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 form .containerDados{
     display: flex;
@@ -100,24 +102,85 @@ form .containerDados{
     width: 80%;
     height: 70%;
     margin: 0px;
+    z-index: 1;
 }
 .containerDadosSpace{
     display: flex;
     flex-direction: column;
     margin: 2vh;
 
+
 }
 input{
     width: 25vw;
     height: 5vh;
 }
-button{
-    width: 10vw;
-    height: 6vh;
-    color: #ffffff;
-    background-color: #2382f7;
-    margin: 0vh 0vw 0vh;
-}
 label{
     font-size: 3vh;
+}
+
+.containerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.8; /* opcional: deixa a imagem mais suave para o texto ser legível */
+    overflow: hidden;
+    z-index: 0;
+}
+
+.containerImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+form.container {
+    position: relative; /* necessário para que o z-index dos filhos funcione corretamente */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.85); /* leve transparência para destacar o formulário */
+    border-radius: 15px;
+    width: 30vw;
+    height: 60vh;
+    margin: 5vh 0vw 0vh;
+    overflow: hidden;
+}
+
+.containerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.8; /* imagem de fundo mais suave */
+    pointer-events: none; /* evita que a imagem bloqueie cliques nos inputs */
+}
+
+.containerImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerDados {
+    position: relative;
+    z-index: 2; /* garante que fique acima da imagem */
+}
+button{
+    background-color: #2382f7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 10vw;
+    height: 6vh;
 }
